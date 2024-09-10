@@ -12,10 +12,13 @@ import {
     StyleSheet,
     View,
     Text,
-    ViewPropTypes,
 } from 'react-native'
 
 import PropTypes from 'prop-types';
+import {
+  TextPropTypes,
+  ViewPropTypes
+} from 'deprecated-react-native-prop-types';
 
 const styles = StyleSheet.create({
     container: {
@@ -42,7 +45,7 @@ export default class CornerLabel extends Component {
 
     static propTypes = {
         style: ViewPropTypes.style,
-        textStyle: Text.propTypes.style,
+        textStyle: TextPropTypes.style,
         cornerRadius: PropTypes.number.isRequired,
         alignment: PropTypes.oneOf([
             'left',
